@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sally Student Resume React</title>
+</head>
+
+<body>
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin>
+    </script>
+    <script type="text/babel">
+
+        const tel = `tel:+1(555)555-5555`;
+        const img = `https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg`;
+        const email = `mailto:sally.email@gmail.com`;
+        const anchorTel = (<a href={tel}>(555)-555-5555</a>);
+        const anchorImg = (<img src={img} height="200" alt="Picture of Sally"></img>);
+        const anchorEmail = (<a href={email}>sally.email@gmail.com</a>);
+        const address = (
+            <React.Fragment>
+                <p>324 Blackwood Street</p>
+                <p>San Antonio, TX 78023</p>
+                <p>{anchorTel}</p>
+                <p>{anchorEmail}</p>
+            </React.Fragment>
+        );
+
+        function App(props) {
+            console.log(props)
+
+            return (
+                <React.Fragment>
+                <header>
+                    <h1>Sally Student</h1>
+                    <address>{address}</address>
+                    <p>{anchorImg}</p>
+                </header>
+
+                <hr></hr>
+
+                <main>
+                    <section>
+                        <h2>CAREER OBJECTIVE</h2>
+                        <p>I'm following my passion of learning computer programming.</p>
+                    </section>
+
+                    <section>
+                        <h2>PROFESSIONAL EXPERIENCE</h2>
+                        <p><b>REGIONS FINANCIAL, Birmingham, AL</b></p>
+                        <p>Administrative Assistant, <i>2012 - Present</i></p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor provident molestias placeat nesciunt
+                                dolorem, omnis repellendus tenetur voluptatum quas laudantium a sapiente saepe mollitia numquam
+                                iusto! Accusamus quisquam sunt impedit.</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, esse ab. Nulla quibusdam magni
+                                earum! Repellat, ea perspiciatis? Ipsum ipsa unde dolor nisi id obcaecati ea accusantium at hic
+                                voluptatum.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quam, aut molestias, optio ullam
+                                ipsum inventore incidunt molestiae, dolorem asperiores enim nesciunt eaque cupiditate autem rem ex
+                                itaque nam. Hic!</li>
+                        </ul>
+                        <p><b>BRIGHT SPOT, Bosto, MA</b></p>
+                        <p>Secretary, <i>2008 - 2012</i></p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor provident molestias placeat nesciunt
+                                dolorem, omnis repellendus tenetur voluptatum quas laudantium a sapiente saepe mollitia numquam
+                                iusto! Accusamus quisquam sunt impedit.</li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, esse ab. Nulla quibusdam magni
+                                earum! Repellat, ea perspiciatis? Ipsum ipsa unde dolor nisi id obcaecati ea accusantium at hic
+                                voluptatum.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quam, aut molestias, optio ullam
+                                ipsum inventore incidunt molestiae, dolorem asperiores enim nesciunt eaque cupiditate autem rem ex
+                                itaque nam. Hic!</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>EDUCATION</h2>
+                        <p><b>Brown University, St. Providence, RI</b></p>
+                        <ul>
+                            <li>GPA: 3.7/4.0</li>
+                        </ul>
+                    </section>
+
+                </main>
+                </React.Fragment>
+            );
+        };
+
+        const rootElement = document.querySelector('#application-root')
+        ReactDOM.render(<App />, rootElement);
+ 
+    </script>
+</body>
+
+</html>
